@@ -1,16 +1,21 @@
 using System;
-namespace exercise1{
-
-class Program
-{
-    static void Main(string[] args)
+namespace Exercise1
     {
-        //Ask the user for thier name
-        Console.Write("What is your name? ");
-        String name = Console.ReadLine();
-        // Greet the user Using the variable
-        Console.WriteLine($"Hello, {name} ! Welcome to C# programming.");
-    }
-}
-}
+        class Program
     
+        {
+            static void Main(string[] args)
+            {
+                Console.Write("What is your first name? ");
+                string firstName = Console.ReadLine();
+
+                Console.Write("What is your last name? ");
+                string lastName = Console.ReadLine();
+
+                Console.WriteLine($"\nYour name is {lastName}, {firstName} {lastName}.");
+            }
+        }
+    }
+    
+
+ 

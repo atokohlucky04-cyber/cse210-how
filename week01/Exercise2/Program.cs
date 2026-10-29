@@ -1,21 +1,49 @@
-using System;
 
-namespace Exercise1
-{
-    class Program
+    using System;
+
+    namespace Exercise2
     {
-        static void Main(string[] args)
+        class Program
         {
-            // Prompt the user for their first name
-            Console.Write("What is your first name? ");
-            string firstName = Console.ReadLine();
+            static void Main(string[] args)
+            {
+                Console.Write("What is your grade percentage? ");
+                string answer = Console.ReadLine();
+                int percent = int.Parse(answer);
 
-            // Prompt the user for their last name
-            Console.Write("What is your last name? ");
-            string lastName = Console.ReadLine();
+                string letter = "";
 
-            // Display the text back in the requested format using string interpolation
-            Console.WriteLine($"\nYour name is {lastName}, {firstName} {lastName}.");
+                if (percent >= 90)
+                {
+                    letter = "A";
+                }
+                else if (percent >= 80)
+                {
+                    letter = "B";
+                }
+                else if (percent >= 70)
+                {
+                    letter = "C";
+                }
+                else if (percent >= 60)
+                {
+                    letter = "D";
+                }
+                else
+                {
+                    letter = "F";
+                }
+
+                Console.WriteLine($"Your grade is: {letter}");
+
+                if (percent >= 70)
+                {
+                    Console.WriteLine("Congratulations, you passed!");
+                }
+                else
+                {
+                    Console.WriteLine("Keep working hard for next time!");
+                }
+            }
         }
     }
-}
