@@ -1,6 +1,3 @@
-
-using System;
-
 public class Entry
 {
     public string _date;
@@ -9,7 +6,7 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
-        Console.WriteLine($"{_entryText}\n");
+        System.Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
+        System.Console.WriteLine($"{_entryText}\n");
     }
 }
