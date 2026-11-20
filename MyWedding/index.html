@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyfab & Yole - Wedding Invitation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            font-family: 'Georgia', serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .invitation-card {
+            background: linear-gradient(135deg, #fffdfa 0%, #f7f1e5 100%);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px #d4af37;
+            overflow: hidden;
+            position: relative;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Decorative Gold Border Frame */
+        .invitation-card::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid #c5a059;
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        /* Floral Header Elements */
+        .floral-top {
+            font-size: 24px;
+            color: #8b0000;
+            margin-bottom: 5px;
+        }
+
+        .families-text {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .parents-names {
+            font-size: 11px;
+            line-height: 1.4;
+            color: #444;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Couple Photo Section */
+        .couple-photo-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 12px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #d4af37;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .couple-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .invitation-subtitle {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b0000;
+            margin-bottom: 5px;
+        }
+
+        /* Names Styling */
+        .couple-names {
+            font-family: 'Brush Script MT', cursive, serif;
+            font-size: 38px;
+            color: #8b0000;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(212, 175, 55, 0.3);
+        }
+
+        .couple-names span {
+            font-size: 22px;
+            display: block;
+            font-family: 'Georgia', serif;
+            color: #d4af37;
+            font-style: italic;
+            margin: 2px 0;
+        }
+
+        .groom-fullname {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        /* Event Details Box */
+        .event-details {
+            background: rgba(212, 175, 55, 0.08);
+            border-top: 1px dashed #d4af37;
+            border-bottom: 1px dashed #d4af37;
+            padding: 12px 10px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-item h4 {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #8b0000;
+            margin-bottom: 3px;
+        }
+
+        .detail-item p {
+            font-size: 11px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Venue & Info */
+        .venue-info {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .venue-info strong {
+            color: #8b0000;
+        }
+
+        /* Color of the day */
+        .color-tag {
+            font-size: 11px;
+            color: #2e5a36;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Toast to Love Section */
+        .toast-section {
+            font-size: 10px;
+            line-height: 1.4;
+            color: #555;
+            font-style: italic;
+            border-top: 1px solid #e2d2b3;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .cheers {
+            font-family: 'Brush Script MT', cursive, serif;
+            font-size: 28px;
+            color: #8b0000;
+            margin-top: 8px;
+        }
+
+        /* Programmer Credit Footer */
+        .programmer-credit {
+            margin-top: 15px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(212, 175, 55, 0.4);
+            font-size: 9px;
+            color: #666;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <div class="floral-top">🌹 ❧ 🌹</div>
+        <p class="families-text">Together With Their Families</p>
+        <p class="parents-names">
+            Pastor Amos Adokuru Unugbua & Mrs. Charity Amos<br>
+            <span style="font-size:9px; font-weight:normal;">of Etasko East, Edo State, Okpekpe.</span><br><br>
+            Engr. Simeon Umukoro & Mrs. Ese Umukoro<br>
+            <span style="font-size:9px; font-weight:normal;">of Isoko North LGA, Delta State.</span>
+        </p>
+
+        <p class="invitation-subtitle">Joyfully invite you to celebrate the solemnization of holy matrimony of their children</p>
+
+        <div class="couple-photo-container">
+            <img src="wedding1.jpg" alt="Joyfab & Yole">
+        </div>
+
+        <h1 class="couple-names">
+            Joyfab Amos <span style="font-size:18px;">UNUGBUA</span>
+            <span>&</span>
+            Yole Umukoro
+        </h1>
+        <p class="groom-fullname">(EMMANUEL)</p>
+
+        <div class="event-details">
+            <div class="detail-item">
+                <h4>Date</h4>
+                <p>Saturday<br>28th November, 2026</p>
+            </div>
+            <div style="width: 1px; height: 30px; background: #d4af37;"></div>
+            <div class="detail-item">
+                <h4>Time</h4>
+                <p>10:00 AM<br>Prompt</p>
+            </div>
+        </div>
+
+        <div class="venue-info">
+            📍 <strong>VENUE:</strong> GOD'S GOOD SHEPHERD MIRACLE INT'L.<br>
+            Major Junction, Suleja, Niger State.<br>
+            <strong>— RECEPTION —</strong><br>
+            Follows at O Brown Along Jafer Road, Suleja, Niger State.
+        </div>
+
+        <p class="color-tag">🎨 COLOR OF THE DAY: Blush Pink, Burgundy & Green</p>
+
+        <div class="toast-section">
+            <p><strong>A TOAST TO LOVE:</strong><br>
+            To love, laughter, and a lifetime of beautiful memories. May your home be filled with God's unfailing love, unending joy, good health, peace, prosperity, and countless reasons to smile...</p>
+            <div class="cheers">Cheers!</div>
+        </div>
+
+        <div class="programmer-credit">
+            Programmer: Lucky Ado techworld ltd . Contact. 07060680312
+        </div>
+    </div>
+
+</body>
+</html>
